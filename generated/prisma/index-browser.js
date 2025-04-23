@@ -135,13 +135,23 @@ exports.Prisma.OrderScalarFieldEnum = {
 exports.Prisma.ProductScalarFieldEnum = {
   id: 'id',
   createdAt: 'createdAt',
+  updatedAt: 'updatedAt',
+  title: 'title',
+  description: 'description',
+  price: 'price',
+  brandId: 'brandId'
+};
+
+exports.Prisma.BrandScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };
 
 exports.Prisma.OrderProductScalarFieldEnum = {
   orderId: 'orderId',
-  productId: 'productId',
-  userId: 'userId'
+  productId: 'productId'
 };
 
 exports.Prisma.SortOrder = {
@@ -164,6 +174,7 @@ exports.Prisma.ModelName = {
   User: 'User',
   Order: 'Order',
   Product: 'Product',
+  Brand: 'Brand',
   OrderProduct: 'OrderProduct'
 };
 
