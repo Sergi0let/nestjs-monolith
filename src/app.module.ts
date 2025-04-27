@@ -8,6 +8,7 @@ import { PrismaModule } from './prisma/prisma.module';
 import { ProductModule } from './product/product.module';
 import { UserModule } from './user/user.module';
 import { RedisModule } from './redis/redis.module';
+import { ElasticModule } from './elastic/elastic.module';
 
 @Module({
   imports: [
@@ -31,6 +32,7 @@ import { RedisModule } from './redis/redis.module';
     ProductModule,
     AuthModule,
     RedisModule,
+    ElasticModule,
   ],
   controllers: [],
   providers: [],
