@@ -129,7 +129,10 @@ exports.Prisma.OrderScalarFieldEnum = {
   id: 'id',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',
-  userId: 'userId'
+  userId: 'userId',
+  isPaid: 'isPaid',
+  paymentIntentId: 'paymentIntentId',
+  totalAmount: 'totalAmount'
 };
 
 exports.Prisma.ProductScalarFieldEnum = {

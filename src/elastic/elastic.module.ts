@@ -11,13 +11,13 @@ import { ElasticService } from './elastic.service';
       imports: [ConfigModule],
       useFactory: (configService: ConfigService) => ({
         node: configService.get('ELASTICSEARCH_URL'),
-        requestTimeout: 600,
-        ssl: false,
+        requestTimeout: 30000,
       }),
       inject: [ConfigService],
     }),
   ],
   controllers: [ElasticController],
   providers: [ElasticService],
+  exports: [ElasticService],
 })
 export class ElasticModule {}

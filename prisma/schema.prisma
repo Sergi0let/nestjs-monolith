@@ -27,12 +27,15 @@ model User {
 }
 
 model Order {
-  id           Int            @id @default(autoincrement())
-  createdAt    DateTime       @default(now()) @map("created_at")
-  updatedAt    DateTime       @updatedAt @map("updated_at")
-  userId       Int?
-  orderProduct OrderProduct[]
-  User         User?          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  id              Int            @id @default(autoincrement())
+  createdAt       DateTime       @default(now()) @map("created_at")
+  updatedAt       DateTime       @updatedAt @map("updated_at")
+  userId          Int?
+  orderProduct    OrderProduct[]
+  isPaid          Boolean        @default(false) @map("is_paid")
+  paymentIntentId String?        @map("payment_intent_id")
+  totalAmount     Int            @default(0) @map("total_amount")
+  User            User?          @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@map("orders")
 }
